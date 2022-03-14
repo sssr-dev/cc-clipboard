@@ -1,8 +1,9 @@
 import os
-import pyperclip
-from pynput import keyboard
 import time
+
+from pynput import keyboard
 import requests as rq
+import pyperclip
 
 copy_hotkey = "<ctrl>+c" if os.uname().sysname.lower() != "darwin" else "<cmd>+c"
 
@@ -14,7 +15,7 @@ def get_link_or_no():
     if lpcps > 1:
         if any((pcp.startswith("http://"), pcp.startswith("https://"))):
             if not pcp.startswith("https://cc.sssr.dev"):
-                r = rq.get("https://api.sssr.dev/cc?create="+pcp).json()['object']['short']
+                r = rq.get("https://api.sssr.dev/cc?create=" + pcp).json()['object']['short']
                 print(f"{pcp} => {r}")
                 pyperclip.copy(r)
 
