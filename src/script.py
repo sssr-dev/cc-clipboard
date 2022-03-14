@@ -13,7 +13,7 @@ def get_link_or_no():
     pcp: str = pyperclip.paste()
     lpcps = len(pcp.split("."))
     if lpcps > 1:
-        if any((pcp.startswith("http://"), pcp.startswith("https://"))):
+        if pcp.startswith("http://") or pcp.startswith("https://"):
             if not pcp.startswith("https://cc.sssr.dev"):
                 r = rq.get("https://api.sssr.dev/cc?create=" + pcp).json()['object']['short']
                 print(f"{pcp} => {r}")
