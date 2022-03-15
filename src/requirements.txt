@@ -1,2 +1,3 @@
 pyperclip
 pynput
+win10toast
