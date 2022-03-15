@@ -11,9 +11,11 @@ import pyperclip
 
 try:
     import win10toast
+
+    toast = win10toast.ToastNotifier().show_toast
 except ImportError:
     win10toast = None
-
+    toast = lambda *x: print("Install win10toast!")
 
 copy_hotkey = "<ctrl>+c" if os.uname().sysname.lower() != "darwin" else "<cmd>+c"
 plt = platform.system()
@@ -37,7 +39,7 @@ def notification(message):
     elif plt == "Windows":
         if win10toast is not None:
             # noinspection PyUnresolvedReferences
-            win10toast.ToastNotifier().show_toast(title, message)
+            (title, message)
         return
     else:
         return

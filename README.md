@@ -7,22 +7,6 @@
     <br/>
 </p>
 
-[//]: # (<a href="./src/main.py">)
-
-[//]: # (        <img src="./.readme_files/preview.png" alt="preview ds">)
-
-[//]: # (    </a>)
-
-[//]: # (    <br/>)
-
-### Run
-```shell
-$ python3 main.py start  # start program
-
-$ python3 main.py stop   # stop program
-
-```
-
 ### Install
 
 ```shell
@@ -33,4 +17,26 @@ $ git clone https://github.com/sssr-dev/cc-clipboard.git
 $ cd src
 $ pip3 install -r requirements.txt
   # Install all dependents
+```
+
+### Run
+
+If you use MacOS or Linux:
+
+```shell
+# Shell
+
+$ python3 main.py start  # start program
+
+$ python3 main.py stop   # stop program
+```
+
+If you use win10:
+
+```shell
+# cmd
+
+> pip install -U win10toast
+
+> py cc_clipboard_script.py  # start program
 ```

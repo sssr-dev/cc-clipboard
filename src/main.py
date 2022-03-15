@@ -4,7 +4,7 @@ import sys
 
 
 def stop():
-    cmd = 'ps ax | grep "ython script.py"'
+    cmd = 'ps ax | grep "cc_clipboard_script.py"'
     print("$", cmd)
     o = os.popen(cmd).read()
     print(o)
@@ -15,7 +15,7 @@ def stop():
 
 def start():
     stop()
-    cmd = 'nohup python3 script.py > cc.log &'
+    cmd = 'nohup python3 cc_clipboard_script.py > cc.log &'
     print("$", cmd)
     print(os.popen(cmd).read())
 
